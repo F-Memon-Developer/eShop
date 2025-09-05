@@ -23,7 +23,7 @@ const Products = () => {
     "Adidas", "Sony", "Gucci", "Nike", "Roadster", "Fossil", "Puma"
   ];
 
-  // filter logic
+
   const filteredProducts = AllProducts
     .filter((p) => category === "All" || p.category === category)
     .filter((p) => brand === "All" || p.brand === brand)
@@ -45,7 +45,6 @@ const Products = () => {
 
   return (
     <div className="shop-container">
-      {/* Sidebar */}
       <aside className="sidebar">
         <h3>Categories</h3>
         <ul>
@@ -82,7 +81,6 @@ const Products = () => {
         </button>
       </aside>
 
-      {/* Main Content */}
       <main className="products-section">
         <div className="top-bar">
           <div className="view-toggle">
@@ -120,7 +118,6 @@ const Products = () => {
                 <h3 className="product-name">{item.name}</h3>
                 <p className="product-price">${item.price}</p>
 
-                {/* List view extra details */}
                 {view === "list" && (
                   <>
                     <p className="product-brand">Brand: {item.brand}</p>
@@ -143,3 +140,4 @@ const Products = () => {
 };
 
 export default Products;
+
